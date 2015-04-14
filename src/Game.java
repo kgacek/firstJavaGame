@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 
 
+@SuppressWarnings("serial")
 public class Game extends JPanel {
 	Ball ball=new Ball(this);
 	Racquets rac=new Racquets(this);
@@ -20,6 +21,7 @@ public class Game extends JPanel {
 			@Override
 			public void keyReleased(KeyEvent e) {
 				rac.keyReleased(e);
+				System.out.print("ssss");
 			}
 
 			@Override
@@ -34,8 +36,8 @@ public class Game extends JPanel {
 	public void paint(Graphics g){
 	super.paint(g);
 	Graphics2D g2d = (Graphics2D) g;
-	ball.paint(g2d);
 	rac.paint(g2d);
+	ball.paint(g2d);
 	
 	}
 	public void move(){

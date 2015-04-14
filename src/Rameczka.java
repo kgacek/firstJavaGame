@@ -20,7 +20,7 @@ public class Rameczka extends JFrame{
 		while (true){
 			game.move();
 			game.repaint();
-			Thread.sleep(4);
+			Thread.sleep(5);
 			
 		}
 	

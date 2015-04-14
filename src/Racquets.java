@@ -1,9 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
-
-import javax.swing.JPanel;
 
 
 public class Racquets{
@@ -29,9 +26,9 @@ public class Racquets{
 	}
 	
 	public void move(){
-		if(getYPos1() > 0 && getYPos1() < game.getWidth()-50)
+		if(getYPos1()+dy1 > 0 && getYPos1()+dy1 < game.getHeight()-50)
 		setYPos1(getYPos1()+dy1);
-		if(getYPos2() > 0 && getYPos2() < game.getWidth()-50)
+		if(getYPos2()+dy1 > 0 && getYPos2()+dy1 < game.getHeight()-50)
 		setYPos2(getYPos2()+dy2);	
 		
 	}
