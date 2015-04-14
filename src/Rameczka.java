@@ -14,16 +14,13 @@ public class Rameczka extends JFrame{
 	
 	
 	public static void main(String[] args) throws InterruptedException {
-		Rameczka gra=new Rameczka();
-		Ball pilka=new Ball();
-		Racquet paletki= new Racquet();
-
-		gra.add(paletki);
-		gra.add(pilka);
+		Rameczka ramka=new Rameczka();	
+		Game game=new Game();
+		ramka.add(game);
 		while (true){
-			pilka.moveBall();
-			pilka.repaint();
-			Thread.sleep(1);
+			game.move();
+			game.repaint();
+			Thread.sleep(4);
 			
 		}
 	
