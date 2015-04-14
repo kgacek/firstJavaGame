@@ -32,6 +32,7 @@ public class Ball{
 		if (getYPos()  + ya > game.getHeight() - 30)
 			ya = -1;
 		
+		
 		setXPos(getXPos()+xa);
 		setYPos(getYPos()+ya);
 	}
