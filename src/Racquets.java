@@ -30,9 +30,9 @@ public class Racquets{
 	
 	public void move(){
 		if(getYPos1() > 0 && getYPos1() < game.getWidth()-50)
-		setYPos1(getYPos1()+getDy1());
+		setYPos1(getYPos1()+dy1);
 		if(getYPos2() > 0 && getYPos2() < game.getWidth()-50)
-		setYPos2(getYPos2()+getDy2());	
+		setYPos2(getYPos2()+dy2);	
 		
 	}
 	
