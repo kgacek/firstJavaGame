@@ -25,6 +25,7 @@ public class Game extends JPanel {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				rac.keyPressed(e);
+				
 			}
 		});
 		setFocusable(true);
