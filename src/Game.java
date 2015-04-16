@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
@@ -14,6 +15,9 @@ public class Game extends JPanel {
 	
 	
 	public Game(){
+		setSize(700,400);
+		setVisible(true);
+		setBackground(Color.gray);
 		addKeyListener(new KeyListener() {
 
 			@Override

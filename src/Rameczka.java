@@ -6,7 +6,7 @@ public class Rameczka extends JFrame{
 	 public Rameczka()
 	 {
 		 super("rameczka");
-		 setSize(800,400);
+		 setSize(800,600);
 		 setVisible(true);
 		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	 }
