@@ -15,7 +15,7 @@ public class Game extends JPanel {
 	
 	
 	public Game(){
-		setSize(700,400);
+		setSize(700,300);
 		setVisible(true);
 		setBackground(Color.gray);
 		addKeyListener(new KeyListener() {

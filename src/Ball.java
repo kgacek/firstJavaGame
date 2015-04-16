@@ -21,11 +21,11 @@ public class Ball{
 	public void moveBall(){
 		if (getXPos() + xa < 0)
 			game.gameOver();	
-		if (getXPos() + xa < Racquets.XPOS1 && colision());
-		
+		if ((getXPos() + xa < Racquets.XPOS1)&& colision() )
+			xa = 1;
 		if (getXPos()  + xa > game.getWidth()-D)
 			game.gameOver();		
-		if (getXPos()> game.getWidth()-D -20- Racquets.XPOS2 && colision())	
+		if ((getXPos()> (game.getWidth()-D- Racquets.XPOS2)) && colision())	
 				xa = -1;		
 		if (getYPos()  + ya < 0)
 			ya = 1;
@@ -41,7 +41,7 @@ public class Ball{
 					getBounds().intersects(game.rac.getBounds2()));
 	}
 	public Rectangle getBounds() {
-		return new Rectangle(getXPos(), getYPos(),D+200,D+200);
+		return new Rectangle(getXPos(), getYPos(),D,D);
 	}
 			
 	public void paint(Graphics2D g2d) {

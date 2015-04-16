@@ -16,6 +16,8 @@ public class Rameczka extends JFrame{
 	public static void main(String[] args) throws InterruptedException {
 		Rameczka ramka=new Rameczka();	
 		Game game=new Game();
+		//System.out.println(Racquets.XPOS1);
+		//System.out.println(Racquets.XPOS2);
 		ramka.add(game);
 		while (true){
 			game.move();

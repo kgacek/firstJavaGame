@@ -6,10 +6,10 @@ import java.awt.event.KeyEvent;
 
 public class Racquets{
 	
-	private static final int WIDTH = 60;
-	private static final int HEIGHT = 10;
+	private static final int WIDTH = 10;
+	private static final int HEIGHT = 60;
 	static final int XPOS1 = 20;
-	static final int XPOS2= XPOS1 + HEIGHT;
+	static final int XPOS2= 30;
 	private int yPos1;
 	private int yPos2;
 	private int dy1=0;
@@ -25,9 +25,9 @@ public class Racquets{
 	public void paint(Graphics g2d) {
 
 		g2d.setColor(Color.black);
-		g2d.fillRect(XPOS1, getYPos1(), HEIGHT, WIDTH);
+		g2d.fillRect(XPOS1, getYPos1(), WIDTH,HEIGHT);
 		g2d.setColor(Color.red);
-		g2d.fillRect(game.getWidth()-XPOS2, getYPos2(), HEIGHT, WIDTH);
+		g2d.fillRect(game.getWidth()-XPOS2, getYPos2(), WIDTH,HEIGHT);
 	}
 	
 	public void move(){
@@ -38,10 +38,10 @@ public class Racquets{
 		
 	}
 	public Rectangle getBounds1() {
-		return new Rectangle(20, getYPos1() , WIDTH, HEIGHT);
+		return new Rectangle(XPOS1, getYPos1() , WIDTH, HEIGHT);
 	}
 	public Rectangle getBounds2() {
-		return new Rectangle(game.getWidth()-30, getYPos1() , WIDTH, HEIGHT);
+		return new Rectangle(game.getWidth()-XPOS2, getYPos2() , WIDTH,HEIGHT);
 	}
 	
 	public int getYPos1() {
