@@ -1,10 +1,15 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 
 public class Racquets{
 	
+	private static final int WIDTH = 60;
+	private static final int HEIGHT = 10;
+	static final int XPOS1 = 20;
+	static final int XPOS2= XPOS1 + HEIGHT;
 	private int yPos1;
 	private int yPos2;
 	private int dy1=0;
@@ -20,9 +25,9 @@ public class Racquets{
 	public void paint(Graphics g2d) {
 
 		g2d.setColor(Color.black);
-		g2d.fillRect(20, getYPos1(), 8, 50);
+		g2d.fillRect(XPOS1, getYPos1(), HEIGHT, WIDTH);
 		g2d.setColor(Color.red);
-		g2d.fillRect(game.getWidth()-28, getYPos2(), 8, 50);
+		g2d.fillRect(game.getWidth()-XPOS2, getYPos2(), HEIGHT, WIDTH);
 	}
 	
 	public void move(){
@@ -31,6 +36,12 @@ public class Racquets{
 		if(getYPos2()+dy1 > 0 && getYPos2()+dy1 < game.getHeight()-50)
 		setYPos2(getYPos2()+dy2);	
 		
+	}
+	public Rectangle getBounds1() {
+		return new Rectangle(20, getYPos1() , WIDTH, HEIGHT);
+	}
+	public Rectangle getBounds2() {
+		return new Rectangle(game.getWidth()-30, getYPos1() , WIDTH, HEIGHT);
 	}
 	
 	public int getYPos1() {

@@ -3,6 +3,7 @@ import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -14,9 +15,6 @@ public class Game extends JPanel {
 	
 	public Game(){
 		addKeyListener(new KeyListener() {
-			@Override
-			public void keyTyped(KeyEvent e) {
-			}
 
 			@Override
 			public void keyReleased(KeyEvent e) {
@@ -29,10 +27,20 @@ public class Game extends JPanel {
 				rac.keyPressed(e);
 				
 			}
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
 		});
 		setFocusable(true);
 	}
 	
+	public void gameOver() {
+		JOptionPane.showMessageDialog(this, "Game Over", "Game Over", JOptionPane.YES_NO_OPTION);
+		System.exit(ABORT);
+	}
 	public void paint(Graphics g){
 	super.paint(g);
 	Graphics2D g2d = (Graphics2D) g;
